@@ -39,7 +39,7 @@ app.use(
     }
 )
 
-const connectionString = "mongodb+srv://admin:123@cluster0.fecu4mc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+const connectionString = process.env.MONGO_URI
 
 
 mongoose.connect(connectionString).then(
